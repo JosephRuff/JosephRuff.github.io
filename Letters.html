@@ -26,6 +26,20 @@
 			});
 		});
 		</script>
+		<style>
+			.code1 {
+				color:#ffa500;
+			}
+			.code2 {
+				color:#9900cc;
+			}
+			.code3 {
+				color:#008000;
+			}
+			.code4 {
+				color:#ff0000;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -137,48 +151,48 @@
 									Source Code
 								</h2>
 <pre><code>
-from collections import Counter
+<span class="code1">from</span> collections <span class="code1">import</span> Counter
 
-while (True):
-	print("Please enter a string: ")
-	letters = Counter(input())
+<span class="code1">while</span> (<span class="code1">True</span>):
+	<span class="code2">print</span>(<span class="code3">"Please enter a string: "</span>)
+	letters = Counter(<span class="code2">input</span>())
 
 	wordList = []
 
-	with open("ukenglish.txt", encoding="Latin-1") as f:
-		#Content_list is the list that contains the read lines.     
-		for line in f:
-			line = line.rstrip("\n")
-			valid = True
+	<span class="code1">with</span> <span class="code2">open</span>(<span class="code3">"ukenglish.txt"</span>, encoding=<span class="code3">"Latin-1"</span>) <span class="code1">as</span> f:
+		<span class="code4">#Content_list is the list that contains the read lines.</span>
+		<span class="code1">for</span> line <span class="code1">in</span> f:
+			line = line.rstrip(<span class="code3">"\n"</span>)
+			valid = <span class="code1">True</span>
 			
 			lineCount = Counter(line)
-			for x in lineCount:
-				if (x in letters):
-					if (letters[x] >= lineCount[x]):
-						pass
-					else:
-						valid = False
-				else:
-					valid = False
-			if (valid):
+			<span class="code1">for</span> x <span class="code1">in</span> lineCount:
+				<span class="code1">if</span> (x <span class="code1">in</span> letters):
+					<span class="code1">if</span> (letters[x] >= lineCount[x]):
+						<span class="code1">pass</span>
+					<span class="code1">else</span>:
+						valid = <span class="code1">False</span>
+				<span class="code1">else</span>:
+					valid = <span class="code1">False</span>
+			<span class="code1">if</span> (valid):
 				wordList.append(line)
 				
-				#print(lineCount)
-				#print(letters)
-	#print(wordList)
+				<span class="code4">#print(lineCount)</span>
+				<span class="code4">#print(letters)</span>
+	<span class="code4">#print(wordList)</span>
 
-	for i in range (0, len(wordList) - 1):
-		for j in range (0, len(wordList) - i - 1):
+	<span class="code1">for</span> i <span class="code1">in</span> <span class="code2">range</span> (0, <span class="code2">len</span>(wordList) - 1):
+		<span class="code1">for</span> j <span class="code1">in</span> <span class="code2">range</span> (0, <span class="code2">len</span>(wordList) - i - 1):
 			#print (wordList[j] + " " + wordList[j + 1])
 			if (len(wordList[j]) < len(wordList[j + 1])):
 				temp = wordList[j]
 				wordList[j] = wordList[j + 1]
 				wordList[j + 1] = temp
 			
-	#print(wordList)
+	<span class="code4">#print(wordList)</span>
 
-	for word in wordList:
-		print (str(len(word)) + ": " + word)
+	<span class="code1">for</span> word <span class="code1">in</span> wordList:
+		<span class="code2">print</span> (<span class="code2">str</span>(<span class="code2">len</span>(word)) + <span class="code3">": "</span> + word)
 </code></pre>
 								<hr>
 								<a id="links"></a>
