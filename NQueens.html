@@ -35,6 +35,16 @@
 			});
 		});
 		</script>
+	<style>
+		ul.nested {
+			margin-bottom:0;
+		}
+		@media only screen and (max-width: 980px) {
+			ul.nested {
+				display: none;
+			}
+		}
+	</style>
 	</head>
 	<body class="is-preload">
 
@@ -72,17 +82,93 @@
 								<div class="image main">
 									<img src="images/michal-parzuchowski-6D1lESi9ssU-unsplash.jpg" alt="" />
 								</div>
+								<hr>
+								<h2>
+									Contents
+								</h2>
+								<ul class="alt">
+									<li>
+										<a href="#introduction">Intro</a>
+										<ul class="alt nested">
+											<li><a href="#8queens">The 8 Queens Problem</a></li>
+											<li><a href="#nqueens">The n Queens Problem</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#solution">The Solution</a>
+									</li>
+									<li>
+										<a href="#cases">Test cases</a>
+										<ul class="alt nested">
+											<li><a href="#lower">Lower numbers</a></li>
+											<li><a href="#4queens">4 Queens</a></li>
+											<li><a href="#5queens">5 Queens</a></li>
+											<li><a href="#higher">6 and above</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#improvements">Possible Improvements</a>
+										<ul class="alt nested">
+											<li><a href="#child">Change child generation method</a></li>
+											<li><a href="#state">Consider board state storage method</a></li>
+											<li><a href="#language">Different Programming Language</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#links">Source code</a>
+									</li>
+								</ul>
+								<hr>
+								<a id="introduction"></a>
+								<h2>
+									Intro
+								</h2>
+								<a id="8queens"></a>
+								<h3>
+									The 8 Queens Problem
+								</h3>
+								<p>
+									The eight queens puzzle is the problem of placing eight chess queens on 
+									an 8×8 chessboard so that no two queens threaten each other; thus, a 
+									solution requires that no two queens share the same row, column, or 
+									diagonal. 
+								</p>
+								<a id="nqueens"></a>
+								<h3>
+									The n Queens Problem
+								</h3>
+								<p>
+									The eight queens puzzle is an example of the more general n queens problem of placing n queens on an n×n chessboard, for which solutions exist for all natural numbers n with the exception of n = 2 and n = 3.
+								</p>
+								<hr>
+								<a id="solution"></a>
+								<h2>
+									The Solution
+								</h2>
+								<p>
+									My solution takes an input n, and then proceeds to use a brute force 
+									solution to find every possible board set up. When it finds a valid 
+									solution it prints it, and then proceeds to continue to attempt to find 
+									all other possible solutions. 
+								</p>
+								<hr>
+								<a id="cases"></a>
+								<h2>
+									Test cases
+								</h2>
+								<a id="lower"></a>
 								<header>
-									<h2>
+									<h3>
 										Lower numbers 
-									</h2>
+									</h3>
 									<p>
 										Case: 0 &lt n &lt 4
 									</p>
 								</header>
 								<p>
-									For inputs 1 through 3, there are no valid solutions to the N Queens problem. 
-									This program produces the following outputs when n is between 1 and 3. 
+									For inputs 1 through 3, there are no valid solutions to the N Queens 
+									problem. This program produces the following outputs when n is between 1 
+									and 3. 
 								</p>
 								<div class="box alt">
 									<div class="row gtr-50 gtr-uniform">
@@ -103,32 +189,34 @@
 										</div>
 									</div>
 								</div>
+								<a id="4queens"></a>
 								<header>
-									<h2>
+									<h3>
 										4 Queens
-									</h2>
+									</h3>
 									<p>
 										Case: n = 4
 									</p>
 								</header>
 								<p>
-									For an input of 4, there are only 2 solutions. 
-									This program produces the following output when n is equal to 4. 
+									For an input of 4, there are only 2 solutions. This program produces the 
+									following output when n is equal to 4. 
 								</p>
 								<span class="image fit">
 									<img style="max-width: 643px;" src="images/NQueens4.png" alt="" />
 								</span>
+								<a id="5queens"></a>
 								<header>
-									<h2>
+									<h3>
 										5 Queens
-									</h2>
+									</h3>
 									<p>
 										Case: n = 5 
 									</p>
 								</header>
 								<p>
-									An input of 5 has 10 possible solutions. 
-									This program produces the following output when n is equal to 5. 
+									An input of 5 has 10 possible solutions. This program produces the 
+									following output when n is equal to 5. 
 								</p>
 								<div class="box alt">
 									<div class="row gtr-50 gtr-uniform">
@@ -144,21 +232,68 @@
 										</div>
 									</div>
 								</div>
+								<a id="higher"></a>
 								<header>
-									<h2>
+									<h3>
 										6 and above
-									</h2>
+									</h3>
 									<p>
 										Case: n &gt 5 
 									</p>
 								</header>
 								<p>
-									For all input greater than or equal to 6, the program runs very slowly due to the time complexity of the algorithm used. 
-									It will continue to run until interrupted, outputting any valid solution that it finds. 
+									For all input greater than or equal to 6, the program runs very slowly 
+									due to the time complexity of the algorithm used. It will continue to 
+									run until interrupted, outputting any valid solution that it finds. 
 								</p>
 								<span class="image fit">
 									<img style="max-width: 643px;" src="images/NQueens7.png" alt="" />
 								</span>
+								<hr>
+								<a id="improvements"></a>
+								<h2>
+									Possible Improvements
+								</h2>
+								<a id="child"></a>
+								<h3>
+									Change child generation method
+								</h3>
+								<p>
+									At the moment every time the program generates a board state, it doesn't 
+									consider the potential rotations of that board state. The program could 
+									be improved by considering rotations of a given board state, when 
+									generating it's child state. 
+								</p>
+								<a id="state"></a>
+								<h3>
+									Consider board state storage method
+								</h3>
+								<p>
+									At the moment a given board state is stored as a list of n numbers, 
+									between 0 and n - 1, where each index in the list represents a column of 
+									the board, and the value at that index indicates the position of the 
+									queen in that column. 
+								</p>
+								<p>
+									This method works as we do not need to consider the possibility of 2 
+									queens in the same column. 
+								</p>
+								<p>
+									We can improve this further, by requiring that every number in the list be
+									unique. This works, because 2 of the same number in the array indicates 2 
+									queens being in the same row, which is not allowed. This will eliminate a 
+									large amount incorrect board states, from ever being considered. 
+								</p>
+								<h3>
+									Different Programming Language
+								</h3>
+								<a id="language"></a>
+								<p>
+									Using a compiled programming language rather than an interpreted one like 
+									Python, could improve the speed greatly. 
+								</p>
+								<hr>
+								<a id="links"></a>
 								<p style="text-align:center">
 									<a href="https://github.com/JosephRuff/N-Queens" class="button icon brands fa-github">Source Code</a>
 								</p>
