@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Joseph Ruff - N Queens</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.js"
+			integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			crossorigin="anonymous">
+		</script>
+		<script>
+		$(document).ready(function(){
+			$("#img1").click(function(){
+				$("#img1").parent().toggleClass("col-4");
+			});
+			$("#img2").click(function(){
+				$("#img2").parent().toggleClass("col-4");
+			});
+			$("#img3").click(function(){
+				$("#img3").parent().toggleClass("col-4");
+			});
+			$("#img4").click(function(){
+				$("#img4").parent().toggleClass("col-6");
+			});
+			$("#img5").click(function(){
+				$("#img5").parent().toggleClass("col-6");
+			});
+		});
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="https://josephruff.github.io" class="logo">Joseph Ruff</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="https://josephruff.github.io">Portfolio</a></li>
+							<li><a href="CurriculumVitae.html">Curriculum Vitae</a></li>
+							<li class="active"><a href="NQueens.html">N Queens</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon solid fa-download"><span class="label">Download CV</span></a></li>
+							<li><a href="https://www.linkedin.com/in/joseph-ruff-34a59b188" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/JosephRuff" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>N Queens Problem</h1>
+									<p>Program written in Python 2 for solving the N Queens problem using a brute force aproach</p>
+								</header>
+								<div class="image main">
+									<img src="images/michal-parzuchowski-6D1lESi9ssU-unsplash.jpg" alt="" />
+								</div>
+								<header>
+									<h2>
+										Lower numbers 
+									</h2>
+									<p>
+										Case: 0 &lt n &lt 4
+									</p>
+								</header>
+								<p>
+									For inputs 1 through 3, there are no valid solutions to the N Queens problem. 
+									This program produces the following outputs when n is between 1 and 3. 
+								</p>
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-4">
+											<a id="img1" class="image fit">
+												<img src="images/NQueens1.png" alt="" />
+											</a>
+										</div>
+										<div class="col-4">
+											<a id="img2" class="image fit">
+												<img src="images/NQueens2.png" alt="" />
+											</a>
+										</div>
+										<div class="col-4">
+											<a id="img3" class="image fit">
+												<img src="images/NQueens3.png" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<header>
+									<h2>
+										4 Queens
+									</h2>
+									<p>
+										Case: n = 4
+									</p>
+								</header>
+								<p>
+									For an input of 4, there are only 2 solutions. 
+									This program produces the following output when n is equal to 4. 
+								</p>
+								<span class="image fit">
+									<img style="max-width: 643px;" src="images/NQueens4.png" alt="" />
+								</span>
+								<header>
+									<h2>
+										5 Queens
+									</h2>
+									<p>
+										Case: n = 5 
+									</p>
+								</header>
+								<p>
+									An input of 5 has 10 possible solutions. 
+									This program produces the following output when n is equal to 5. 
+								</p>
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-6">
+											<a id="img4" id="img-1" class="image fit">
+												<img src="images/NQueens5.png" alt="" />
+											</a>
+										</div>
+										<div class="col-6">
+											<a id="img5" class="image fit">
+												<img src="images/NQueens6.png" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<header>
+									<h2>
+										6 and above
+									</h2>
+									<p>
+										Case: n &gt 5 
+									</p>
+								</header>
+								<p>
+									For all input greater than or equal to 6, the program runs very slowly due to the time complexity of the algorithm used. 
+									It will continue to run until interrupted, outputting any valid solution that it finds. 
+								</p>
+								<span class="image fit">
+									<img style="max-width: 643px;" src="images/NQueens7.png" alt="" />
+								</span>
+								<p style="text-align:center">
+									<a href="https://github.com/JosephRuff/N-Queens" class="button icon brands fa-github">Source Code</a>
+								</p>
+							</section>
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Joseph Ruff</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
