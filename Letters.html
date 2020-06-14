@@ -6,11 +6,26 @@
 -->
 <html>
 	<head>
-		<title>Generic Page - Massively by HTML5 UP</title>
+		<title>Joseph Ruff - Countdown Letters</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.js"
+			integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			crossorigin="anonymous">
+		</script>
+		<script>
+		$(document).ready(function(){
+			$("#img1").click(function(){
+				$("#img1").parent().toggleClass("col-6");
+			});
+			$("#img2").click(function(){
+				$("#img2").parent().toggleClass("col-6");
+			});
+		});
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -42,15 +57,134 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<h1>This is a<br />
-									Generic Page</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
+									<h1>Countdown Letters Solver</h1>
+									<p>Python 3 program written to solve the countdown letters game. </p>
 								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
+								<div class="image main"><img src="images/lukas-blazek-UAvYasdkzq8-unsplash.jpg" alt="" /></div>
+								<hr>
+								<h2>
+									Contents
+								</h2>
+								<ul class="alt">
+									<li>
+										<a href="#problem">The Problem</a>
+									</li>
+									<li>
+										<a href="#solution">The Solution</a>
+									</li>
+									<li>
+										<a href="#example">Examples</a>
+									</li>
+									<li>
+										<a href="#code">Source Code</a>
+										<ul class="alt nested">
+											<li><a href="#code">In Page</a></li>
+											<li><a href="#links">GitHub</a></li>
+										</ul>
+									</li>
+								</ul>
+								<hr>
+								<a id="problem"></a>
+								<h2>
+									The Problem
+								</h2>
+								<p>
+									The countdown letters game involves rearranging a selection of 9 letters into 
+									the longest possible word. Each letter in the selection can only be used once,
+									however the selection can contain duplicate letters. 
+								</p>
+								<p>
+									The selection must contain a minimum of 3 consonants and 4 vowels. 
+								</p>
+								<hr>
+								<a id="solution"></a>
+								<h2>
+									The Solution
+								</h2>
+								<p>
+									My solution takes any string input, and will find any words from a given word 
+									list that can be made from the characters in that string. 
+								</p>
+								<p>
+									It achieves this by looking through the entire word list, line by line, and 
+									for every word that is a valid anagram it appends it to a list. 
+								</p>
+								<p>
+									The results are then sorted by length (descending), and printed. 
+								</p>
+								<hr>
+								<a id="example"></a>
+								<h2>
+									Examples
+								</h2>
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-6">
+											<a id="img1" class="image fit">
+												<img src="images/Letters1.png" alt="" />
+											</a>
+										</div>
+										<div class="col-6">
+											<a id="img2" class="image fit">
+												<img src="images/Letters2.png" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<hr>
+								<a id="code"></a>
+								<h2>
+									Source Code
+								</h2>
+<pre><code>
+from collections import Counter
+
+while (True):
+	print("Please enter a string: ")
+	letters = Counter(input())
+
+	wordList = []
+
+	with open("ukenglish.txt", encoding="Latin-1") as f:
+		#Content_list is the list that contains the read lines.     
+		for line in f:
+			line = line.rstrip("\n")
+			valid = True
+			
+			lineCount = Counter(line)
+			for x in lineCount:
+				if (x in letters):
+					if (letters[x] >= lineCount[x]):
+						pass
+					else:
+						valid = False
+				else:
+					valid = False
+			if (valid):
+				wordList.append(line)
+				
+				#print(lineCount)
+				#print(letters)
+	#print(wordList)
+
+	for i in range (0, len(wordList) - 1):
+		for j in range (0, len(wordList) - i - 1):
+			#print (wordList[j] + " " + wordList[j + 1])
+			if (len(wordList[j]) < len(wordList[j + 1])):
+				temp = wordList[j]
+				wordList[j] = wordList[j + 1]
+				wordList[j + 1] = temp
+			
+	#print(wordList)
+
+	for word in wordList:
+		print (str(len(word)) + ": " + word)
+</code></pre>
+								<hr>
+								<a id="links"></a>
+								<p style="text-align:center">
+									<a href="https://github.com/JosephRuff/Countdown-Letters" class="button icon brands fa-github">Source Code</a>
+								</p>
 							</section>
 
 					</div>
