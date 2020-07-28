@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Joseph Ruff - Sudoku</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.js"
+			integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			crossorigin="anonymous">
+		</script>
+	<style>
+		ul.nested {
+			margin-bottom:0;
+		}
+		@media only screen and (max-width: 980px) {
+			ul.nested {
+				display: none;
+			}
+		}
+	</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="https://josephruff.github.io" class="logo">Joseph Ruff</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="https://josephruff.github.io">Portfolio</a></li>
+							<li><a href="CurriculumVitae.html">Curriculum Vitae</a></li>
+							<li class="active"><a href="Sudoku.html">Sudoku Solver</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon solid fa-download"><span class="label">Download CV</span></a></li>
+							<li><a href="https://www.linkedin.com/in/joseph-ruff-34a59b188" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/JosephRuff" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Sudoku Solver</h1>
+									<p>Python program to visualise a backtracking algorithm solving a Sudoku puzzle. </p>
+								</header>
+								<div class="image main">
+									<img src="images/john-morgan-4eBOPIJliNc-unsplashCROPPED.jpg" alt="" />
+								</div>
+								<hr>
+								<h2>
+									Contents
+								</h2>
+								<ul class="alt">
+									<li>
+										<a href="#problem">The Problem</a>
+									</li>
+									<li>
+										<a href="#solution">The Solution</a>
+										<ul class="alt nested">
+											<li>
+												<a href="#algorithm">Backtracking algorithm</a>
+											</li>
+											<li>
+												<a href="#animation">Animation</a>
+											</li>
+											<li>
+												<a href="#input">User Input</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#demo">Demonstration</a>
+									</li>
+									<li>
+										<a href="#links">Source Code</a>
+									</li>
+								</ul>
+								<hr>
+								<a id="problem"></a>
+								<h2>
+									The Problem
+								</h2>
+								<p>
+									In order to solve a Sudoku puzzle you must enter a number between 1 and 9 in every cell on a grid, such that 
+									each row and each column has no repeating digits, as well as having no repeating digits in each of the 9 3x3 
+									blocks. 
+								</p>
+								<p>
+									A typical Sudoku puzzle will be a 9x9 grid, with some of the numbers already filled in. The number of digits 
+									that are given determines the diffculty of said puzzle. 
+								</p>
+								<hr>
+								<a id="solution"></a>
+								<h2>
+									The Solution
+								</h2>
+								<a id="algorithm"></a>
+								<h3>
+									Backtracking algorithm
+								</h3>
+								<p>
+									My solution uses a backtracking algorithm to solve the puzzle. This is a type of brute force algorithm and 
+									works by filling each digit one by one, and then removing them if / when we discover that digit cannot 
+									lead to a solution. 
+								</p>
+								<a id="animation"></a>
+								<h3>
+									Animation
+								</h3>
+								<p>
+									In addition to solving the puzzle, my solution also animates the process using PyGame, allowing the user to 
+									see the algorithm at work. 
+								</p>
+								<a id="input"></a>
+								<h3>
+									User Input
+								</h3>
+								<p>
+									The program will prompt the user to input (y/n) whether or not the program should animate the process. And will 
+									then ask for an input between 0 and 1 to determine the animation speed. This number is simply the interval time 
+									in seconds and therefore I recommend &lt 0.01.
+								</p>
+								<p>
+									The program also reads the starting setup from a .txt file that is written in the following format. 
+								</p>
+								<span class="image fit">
+									<img style="max-width: 477px;" src="images/Sudoku1.png" alt="" />
+								</span>
+								<hr>
+								<a id="demo"></a>
+								<h2>
+									Demonstration
+								</h2>
+								<p>
+									See video below for demonstration of program. 
+								</p>
+								<video style='max-height:462px; width:100%' controls autoplay>
+									<source src="videos/Sudoku1.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video> 
+								<hr>
+								<a id="links"></a>
+								<p style="text-align:center">
+									<a href="https://github.com/JosephRuff/Sudoku" class="button icon brands fa-github">Source Code</a>
+								</p>
+							</section>
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Joseph Ruff</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
