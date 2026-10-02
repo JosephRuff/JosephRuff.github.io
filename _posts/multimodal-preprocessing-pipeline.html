@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Project Name"
+subtitle: "Reproducible data engineering across EEG, ECG, and wearable HAR datasets for downstream self-supervised learning."
+date: 2026-04-12
+last_updated: 2026-09-15
+background: '/img/projects/multimodal-preprocessing-pipeline.jpg'
+---
+
+<p>
+	 This project implements a fully reproducible pipeline for downloading, preprocessing, and validating five open-access multimodal time-series datasets — PAMAP2, WISDM, mHealth, EEGMMIDB, and PTB-XL — in preparation for downstream self-supervised learning workflows. 
+</p>
+
+<p>
+	 The pipeline harmonises three wearable activity recognition datasets (HAR) to a common 20 Hz representation with a shared six-channel accelerometer/gyroscope schema and unified class label taxonomy, enabling a single model to train across datasets. EEG data from the PhysioNet EEG Motor Movement/Imagery Database is preprocessed using MNE, with event-aligned 4-second epochs extracted from motor imagery runs. 12-lead ECG data from PTB-XL is ingested via the PhysioNet AWS S3 mirror, bandpass filtered, and split into patient-safe train, validation, and test folds. 
+</p>
+
+<p>
+	 All outputs are stored as float32 NumPy arrays in a consistent [N, C, T] format alongside structured metadata CSVs covering subject provenance, label mappings, sampling rates, channel schemas, and QC flags. A validation script checks array integrity, label distributions, subject-level leakage controls, and HAR harmonisation across datasets. 
+</p>
+
+<p>
+	 The pipeline scored 3rd out of 17 submissions in a competitive technical assessment for a Research Assistant post at Imperial College London, with the preprocessing plan rated the most thoroughly reasoned of all submissions. 
+</p>
+
+<hr>
+
+<p style="text-align:center">
+	<a href="https://github.com/JosephRuff/multimodal-preprocessing-pipeline" class="button icon brands fa-github">Source Code</a>
+</p>

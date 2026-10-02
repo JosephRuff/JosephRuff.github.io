@@ -1,0 +1,22 @@
+title:              Joseph Ruff
+email:              
+description:        Computer Scientist / Software Developer
+author:             Joseph Ruff
+baseurl:            ""
+url:                "https://josephruff.github.io/"
+
+# Social Profiles
+github_username:    JosephRuff
+linkedin_username:  joseph-ruff-a99062393
+
+google_analytics:   G-QXCF1RW9Q7
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/projects/page:num/"
+permalink:          /projects/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
