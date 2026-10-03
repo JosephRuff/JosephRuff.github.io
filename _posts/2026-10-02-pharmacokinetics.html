@@ -77,8 +77,23 @@ background: '/img/projects/pharmacokinetics.jpg'
 	     {% raw %}{% include figure.html src="/img/projects/pharmacokinetics/your-chart.png" alt="..." caption="..." %}{% endraw %} -->
 	{% include figure.html placeholder=true title="Chart coming soon" text="Simulated blood concentration profiles for both medications will appear here." alt="Placeholder for a chart that is still to come" %}
 
-	<div class="button-row">
-		<a class="btn btn-primary" href="https://github.com/JosephRuff/pharmacokinetics"><i class="fab fa-github"></i> Source Code</a>
+	<div class="list-group notebook-list">
+		<a class="list-group-item list-group-item-action" href="{{ '/pharmacokinetics/01_equations/' | relative_url }}">
+			<span>Workbook 01 &mdash; Equations</span>
+			<span class="notebook-list__go">View <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+		</a>
+		<a class="list-group-item list-group-item-action" href="{{ '/pharmacokinetics/02_parameter_calculations/' | relative_url }}">
+			<span>Workbook 02 &mdash; Parameter Calculations</span>
+			<span class="notebook-list__go">View <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+		</a>
+		<a class="list-group-item list-group-item-action" href="{{ '/pharmacokinetics/03_code_implementation/' | relative_url }}">
+			<span>Workbook 03 &mdash; Code Implementation</span>
+			<span class="notebook-list__go">View <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+		</a>
+		<a class="list-group-item list-group-item-action" href="{{ '/pharmacokinetics/prototype/' | relative_url }}">
+			<span>Early prototype</span>
+			<span class="notebook-list__go">View <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+		</a>
 	</div>
 
 </div>

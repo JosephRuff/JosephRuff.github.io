@@ -1,0 +1,83 @@
+---
+layout: default
+---
+{%- comment -%}
+  Layout for a Jupyter notebook that has been exported to HTML and lives in a GitHub repo.
+  The page's front matter supplies:
+
+    repo          GitHub "owner/name", e.g. JosephRuff/pharmacokinetics
+    html          path of the exported HTML inside that repo, e.g. html_pages/01_equations.html
+    ipynb         (optional) path of the .ipynb inside that repo, used for the "View on GitHub" links
+    parent_url    (optional) page to link back to
+    parent_title  (optional) text for that link
+    background    (optional) banner image
+
+  The branch is always the repo's default one (the "HEAD" ref), so it keeps working if you rename it.
+  assets/notebook-loader.js does the fetching.
+{%- endcomment -%}
+
+{%- if page.ipynb -%}
+  {%- capture source_url -%}https://github.com/{{ page.repo }}/blob/HEAD/{{ page.ipynb }}{%- endcapture -%}
+  {%- assign source_label = "View the .ipynb on GitHub" -%}
+{%- else -%}
+  {%- capture source_url -%}https://github.com/{{ page.repo }}{%- endcapture -%}
+  {%- assign source_label = "View the repository on GitHub" -%}
+{%- endif -%}
+
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead masthead--notebook" style="background-image: url('{{ page.background | relative_url }}')">
+{% else %}
+<header class="masthead masthead--notebook">
+{% endif %}
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>{{ page.title }}</h1>
+          {% if page.description %}
+          <span class="subheading">{{ page.description }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <nav class="notebook-nav" aria-label="Notebook links">
+        {% if page.parent_url %}
+        <a href="{{ page.parent_url | relative_url }}"><i class="fas fa-arrow-left" aria-hidden="true"></i>{{ page.parent_title | default: "Back to project" }}</a>
+        {% endif %}
+        <a href="{{ source_url }}"><i class="fab fa-github" aria-hidden="true"></i>{{ source_label }}</a>
+      </nav>
+
+      <div id="notebook" class="notebook"
+           data-src="https://raw.githubusercontent.com/{{ page.repo }}/HEAD/{{ page.html }}"
+           data-title="{{ page.title | escape }}">
+
+        <p id="notebook-status" class="notebook-status" role="status">Loading notebook&hellip;</p>
+
+        <div id="notebook-error" class="notebook-error" role="alert" hidden>
+          <h2>Something went wrong</h2>
+          <p id="notebook-error-reason">This notebook could not be loaded.</p>
+          <p><a class="btn btn-primary" href="{{ source_url }}"><i class="fab fa-github" aria-hidden="true"></i>{{ source_label }}</a></p>
+        </div>
+
+        <noscript>
+          <div class="notebook-error">
+            <h2>JavaScript is needed to show this notebook</h2>
+            <p><a class="btn btn-primary" href="{{ source_url }}"><i class="fab fa-github" aria-hidden="true"></i>{{ source_label }}</a></p>
+          </div>
+        </noscript>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="{{ '/assets/notebook-loader.js' | relative_url }}" defer></script>
