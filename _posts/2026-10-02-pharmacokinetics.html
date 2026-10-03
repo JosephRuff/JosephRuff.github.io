@@ -1,18 +1,26 @@
 ---
 layout: post
-title: "Multimodal Biosignal Preprocessing Pipeline"
-subtitle: "Reproducible data engineering across EEG, ECG, and wearable HAR datasets for downstream self-supervised learning."
+title: "Modeling ADHD Stimulant Pharmacokinetics"
+subtitle: "Mapping the pharmacokinetic profiles and blood mass concentrations of ADHD therapeutics."
 date: 2026-10-02
 last_updated: 2026-10-03
 background: '/img/projects/pharmacokinetics.jpg'
 ---
 
 <p>
-	This project plots pharmacokinetic formulas to compare how the body processes dextroamfetamine versus its prodrug, lisdexamfetamine. It models active drug mass over time to optimize ADHD treatment.
+	This project establishes a rigorous computational and mathematical framework to simulate, compare, and plot the pharmacokinetics of two primary ADHD stimulant medications: immediate-release dextroamfetamine sulphate and its prodrug counterpart, lisdexamfetamine dimesylate. While both drugs share a high success rate (70–80%) in managing ADHD symptoms by increasing synaptic dopamine and norepinephrine, they exhibit vastly different delivery profiles. Dextroamfetamine is absorbed directly, causing rapid peaks and sharp concentration "crashes." Lisdexamfetamine is an inactive prodrug requiring a rate-limited enzymatic cleavage by red blood cells, which yields a smoother, extended-release profile.
+</p>
+
+<p>
+	To model these dynamics across a three-part workbook series, the project moves away from simplified arithmetic to capture concurrent biological processes through a coupled system of linear ordinary differential equations (ODEs).
+</p>
+
+<p>
+	Ultimately, this study bridges theoretical pharmacology and software engineering. It creates a predictive simulation tool that visually demonstrates how structural chemical variances dictate real-world drug metabolism, therapeutic coverage, and side-effect profiles.
 </p>
 
 <hr>
 
 <p style="text-align:center">
-	<a href="https://github.com/JosephRuff/multimodal-preprocessing-pipeline" class="button icon brands fa-github">Source Code</a>
+	<a href="https://github.com/JosephRuff/pharmacokinetics" class="button icon brands fa-github">Source Code</a>
 </p>
