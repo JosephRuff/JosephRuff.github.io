@@ -75,7 +75,8 @@
   function showNotebook(html) {
     var frame = document.createElement("iframe");
     frame.className = "notebook-frame";
-    frame.title = TITLE;
+    frame.setAttribute("scrolling", "no");
+	frame.title = TITLE;
     frame.addEventListener("load", function () { onFrameLoad(frame); });
     frame.srcdoc = html;
     root.appendChild(frame);
@@ -84,6 +85,8 @@
   function onFrameLoad(frame) {
     var doc = frame.contentDocument;
     var win = frame.contentWindow;
+	doc.documentElement.style.overflow = "hidden";
+    doc.body.style.overflow = "hidden";
     if (!doc || !doc.body) { return; }
     if (statusEl) { statusEl.hidden = true; }
 
