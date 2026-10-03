@@ -7,20 +7,78 @@ last_updated: 2026-10-03
 background: '/img/projects/pharmacokinetics.jpg'
 ---
 
-<p>
-	This project establishes a rigorous computational and mathematical framework to simulate, compare, and plot the pharmacokinetics of two primary ADHD stimulant medications: immediate-release dextroamfetamine sulphate and its prodrug counterpart, lisdexamfetamine dimesylate. While both drugs share a high success rate (70–80%) in managing ADHD symptoms by increasing synaptic dopamine and norepinephrine, they exhibit vastly different delivery profiles. Dextroamfetamine is absorbed directly, causing rapid peaks and sharp concentration "crashes." Lisdexamfetamine is an inactive prodrug requiring a rate-limited enzymatic cleavage by red blood cells, which yields a smoother, extended-release profile.
-</p>
+<div class="project">
 
-<p>
-	To model these dynamics across a three-part workbook series, the project moves away from simplified arithmetic to capture concurrent biological processes through a coupled system of linear ordinary differential equations (ODEs).
-</p>
+	<p class="lead-in">
+		This project establishes a rigorous computational and mathematical framework to simulate, compare, and plot the pharmacokinetics of two primary ADHD stimulant medications: immediate-release dextroamfetamine sulphate and its prodrug counterpart, lisdexamfetamine dimesylate.
+	</p>
 
-<p>
-	Ultimately, this study bridges theoretical pharmacology and software engineering. It creates a predictive simulation tool that visually demonstrates how structural chemical variances dictate real-world drug metabolism, therapeutic coverage, and side-effect profiles.
-</p>
+	<div class="project-note">
+		<p><i class="fas fa-hammer" aria-hidden="true"></i><strong>This project is a work in progress.</strong> Further workbooks and charts will be added as it develops.</p>
+	</div>
 
-<hr>
+	<ul class="project-tags" aria-label="Topics">
+		<li>Pharmacokinetics</li>
+		<li>ODE modelling</li>
+		<li>Simulation</li>
+	</ul>
 
-<p style="text-align:center">
-	<a href="https://github.com/JosephRuff/pharmacokinetics" class="button icon brands fa-github">Source Code</a>
-</p>
+	<h2 class="section-heading">Two drugs, two profiles</h2>
+
+	<p>
+		While both drugs share a high success rate (70&ndash;80%) in managing ADHD symptoms by increasing synaptic dopamine and norepinephrine, they exhibit vastly different delivery profiles.
+	</p>
+
+	<div class="table-responsive">
+		<table class="table project-table">
+			<caption class="sr-only">Comparison of dextroamfetamine sulphate and lisdexamfetamine dimesylate</caption>
+			<thead>
+				<tr>
+					<th scope="col"><span class="sr-only">Property</span></th>
+					<th scope="col">Dextroamfetamine sulphate</th>
+					<th scope="col">Lisdexamfetamine dimesylate</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">Form</th>
+					<td>Immediate-release</td>
+					<td>Inactive prodrug</td>
+				</tr>
+				<tr>
+					<th scope="row">Absorption</th>
+					<td>Absorbed directly</td>
+					<td>Requires rate-limited enzymatic cleavage by red blood cells</td>
+				</tr>
+				<tr>
+					<th scope="row">Concentration profile</th>
+					<td>Rapid peaks and sharp concentration &ldquo;crashes&rdquo;</td>
+					<td>Smoother, extended-release profile</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<h2 class="section-heading">Approach</h2>
+
+	<p>
+		To model these dynamics across a three-part workbook series, the project moves away from simplified arithmetic to capture concurrent biological processes through a coupled system of linear ordinary differential equations (ODEs).
+	</p>
+
+	<h2 class="section-heading">Goal</h2>
+
+	<p>
+		Ultimately, this study bridges theoretical pharmacology and software engineering. It creates a predictive simulation tool that visually demonstrates how structural chemical variances dictate real-world drug metabolism, therapeutic coverage, and side-effect profiles.
+	</p>
+
+	<h2 class="section-heading">Results</h2>
+
+	<!-- When you have a chart, replace this include with:
+	     {% raw %}{% include figure.html src="/img/projects/pharmacokinetics/your-chart.png" alt="..." caption="..." %}{% endraw %} -->
+	{% include figure.html placeholder=true title="Chart coming soon" text="Simulated blood concentration profiles for both medications will appear here." alt="Placeholder for a chart that is still to come" %}
+
+	<div class="button-row">
+		<a class="btn btn-primary" href="https://github.com/JosephRuff/pharmacokinetics"><i class="fab fa-github"></i> Source Code</a>
+	</div>
+
+</div>

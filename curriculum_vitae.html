@@ -6,115 +6,107 @@ background: '/img/bg.jpg'
 permalink: /curriculum_vitae/
 ---
 
-<div class="curriculum-vitae">
-	<section>
-		<a id="contents"></a>
-		<h2>
-			Contents
-		</h2>
-		<nav class="cv-contents" aria-label="CV sections">
-			<ul class="list-inline">
-				<li class="list-inline-item"><a href="#profile">Profile</a></li>
-				<li class="list-inline-item"><a href="#skills">Skills</a></li>
-				<li class="list-inline-item"><a href="#work">Employment</a></li>
-				<li class="list-inline-item"><a href="#publications">Publications</a></li>
-				<li class="list-inline-item"><a href="#education">Education</a></li>
-			</ul>
-		</nav>
-	</section>
+<div class="cv">
+
+	<nav class="cv-contents" aria-label="CV sections">
+		<ul class="list-inline">
+			<li class="list-inline-item"><a href="#profile">Personal Profile</a></li>
+			<li class="list-inline-item"><a href="#skills">Technical Skills</a></li>
+			<li class="list-inline-item"><a href="#work">Employment History</a></li>
+			<li class="list-inline-item"><a href="#publications">Publications</a></li>
+			<li class="list-inline-item"><a href="#education">Education</a></li>
+			<li class="list-inline-item"><a href="#references">References</a></li>
+			<li class="list-inline-item"><a href="#links">Links &amp; Contact Info</a></li>
+		</ul>
+	</nav>
+
 	<section id="profile">
-		<h2 class="section-heading">
-			Personal Profile
-		</h2>
+		<h2 class="section-heading">Personal Profile</h2>
 		<p>
-			Research Software Engineer and Data Infrastructure Specialist with expertise in scientific
-			computing, high-dimensional biological data, and standards-based data integration.
+			Research Software Engineer and Data Infrastructure Specialist with expertise in scientific computing, high-dimensional biological data, and standards-based data integration.
 		</p>
 		<p>
-			As Lead Developer on the AGENT Project at the Royal Botanic Gardens, Kew, I designed and
-			delivered FAIR-compliant, analytics-ready digital infrastructure supporting the integration and
-			interoperability of global plant genetic resource data.
+			As Lead Developer on the AGENT Project at the Royal Botanic Gardens, Kew, I designed and delivered FAIR-compliant, analytics-ready digital infrastructure supporting the integration and interoperability of global plant genetic resource data.
 		</p>
 		<p>
-			My work focuses on relational data modelling, ETL pipeline architecture, RESTful API development
-			(BrAPI), and quantitative software systems that prioritise data quality, reproducibility, and
-			cross-institutional interoperability.
+			My work focuses on relational data modelling, ETL pipeline architecture, RESTful API development (BrAPI), and quantitative software systems that prioritise data quality, reproducibility, and cross-institutional interoperability.
 		</p>
 	</section>
+
 	<section id="skills">
-		<h2 class="section-heading">
-			Technical Skills
-		</h2>
-		<h3>
-			Core Languages
-		</h3>
-		<ul class="list-inline curriculum-vitae-chips">
-			<li>Python</li>
-			<li>SQL</li>
-			<li>R</li>
-			<li>C++</li>
-			<li>Java</li>
-		</ul>
-		<h3>
-			Data Infrastructure &amp; Engineering
-		</h3>
-		<ul class="list-inline curriculum-vitae-chips">
-			<li>Relational data modelling</li>
-			<li>ETL pipeline architecture</li>
-			<li>Data cleaning</li>
-			<li>Deduplication</li>
-			<li>Data validation</li>
-			<li>RESTful API design (BrAPI)</li>
-			<li>FAIR data standards</li>
-			<li>Reproducible workflows</li>
-			<li>Docker-based deployment</li>
-		</ul>
-		<h3>
-			Scientific &amp; Quantitative Computing
-		</h3>
-		<ul class="list-inline curriculum-vitae-chips">
-			<li>High-dimensional data analysis</li>
-			<li>Statistical modelling</li>
-			<li>NumPy</li>
-			<li>SciPy</li>
-			<li>MATLAB</li>
-			<li>VTK-based 3D computational visualisation</li>
-		</ul>
-		<h3>
-			Databases
-		</h3>
-		<ul class="list-inline curriculum-vitae-chips">
-			<li>PostgreSQL</li>
-			<li>MariaDB/MySQL</li>
-			<li>Oracle</li>
-			<li>SQLite</li>
-		</ul>
-		<h3>
-			Data Visualisation
-		</h3>
-		<ul class="list-inline curriculum-vitae-chips">
-			<li>Matplotlib</li>
-			<li>Plotly</li>
-			<li>ggplot</li>
-		</ul>
-		<h3>
-			Web &amp; Application Frameworks
-		</h3>
-		<ul class="list-inline curriculum-vitae-chips">
-			<li>Django</li>
-			<li>Flask</li>
-			<li>Spring</li>
-			<li>JavaScript (jQuery)</li>
-		</ul>
+		<h2 class="section-heading">Technical Skills</h2>
+		<dl class="cv-skills">
+			<dt>Core Languages</dt>
+			<dd>
+				<ul class="cv-chips">
+					<li>Python</li>
+					<li>SQL</li>
+					<li>R</li>
+					<li>C++</li>
+					<li>Java</li>
+				</ul>
+			</dd>
+			<dt>Data Infrastructure &amp; Engineering</dt>
+			<dd>
+				<ul class="cv-chips">
+					<li>Relational data modelling</li>
+					<li>ETL pipeline architecture</li>
+					<li>Data cleaning</li>
+					<li>Deduplication</li>
+					<li>Data validation</li>
+					<li>RESTful API design (BrAPI)</li>
+					<li>FAIR data standards</li>
+					<li>Reproducible workflows</li>
+					<li>Docker-based deployment</li>
+				</ul>
+			</dd>
+			<dt>Scientific &amp; Quantitative Computing</dt>
+			<dd>
+				<ul class="cv-chips">
+					<li>High-dimensional data analysis</li>
+					<li>Statistical modelling</li>
+					<li>NumPy</li>
+					<li>SciPy</li>
+					<li>MATLAB</li>
+					<li>VTK-based 3D computational visualisation</li>
+				</ul>
+			</dd>
+			<dt>Databases</dt>
+			<dd>
+				<ul class="cv-chips">
+					<li>PostgreSQL</li>
+					<li>MariaDB/MySQL</li>
+					<li>Oracle</li>
+					<li>SQLite</li>
+				</ul>
+			</dd>
+			<dt>Data Visualisation</dt>
+			<dd>
+				<ul class="cv-chips">
+					<li>Matplotlib</li>
+					<li>Plotly</li>
+					<li>ggplot</li>
+				</ul>
+			</dd>
+			<dt>Web &amp; Application Frameworks</dt>
+			<dd>
+				<ul class="cv-chips">
+					<li>Django</li>
+					<li>Flask</li>
+					<li>Spring</li>
+					<li>JavaScript (jQuery)</li>
+				</ul>
+			</dd>
+		</dl>
 	</section>
+
 	<section id="work">
-		<h2 class="section-heading">
-			Employment History
-		</h2>
+		<h2 class="section-heading">Employment History</h2>
+
 		<article id="workmar22">
 			<h3>Lead Developer - AGENT Project</h3>
-			<div class="d-flex flex-wrap justify-content-between cv-meta">
-				<span>Royal Botanical Gardens, Kew</span>
+			<div class="cv-meta">
+				<span>Royal Botanic Gardens, Kew</span>
 				<strong>Mar 2022 - Oct 2025</strong>
 			</div>
 			<ul>
@@ -132,10 +124,11 @@ permalink: /curriculum_vitae/
 				</li>
 			</ul>
 		</article>
+
 		<article id="workdec20">
-			<h3>Developer – Useful Plants and Fungi of Columbia</h3>
-			<div class="d-flex flex-wrap justify-content-between cv-meta">
-				<span>Royal Botanical Gardens, Kew</span>
+			<h3>Developer – Useful Plants and Fungi of Colombia</h3>
+			<div class="cv-meta">
+				<span>Royal Botanic Gardens, Kew</span>
 				<strong>Dec 2020 - Feb 2022</strong>
 			</div>
 			<ul>
@@ -153,9 +146,10 @@ permalink: /curriculum_vitae/
 				</li>
 			</ul>
 		</article>
+
 		<article id="worknov20">
 			<h3>Volunteer Software Developer</h3>
-			<div class="d-flex flex-wrap justify-content-between cv-meta">
+			<div class="cv-meta">
 				<span>Medical Physics and Bio-engineering, UCLH</span>
 				<strong>Nov 2020</strong>
 			</div>
@@ -164,134 +158,124 @@ permalink: /curriculum_vitae/
 					Translated medical imaging algorithms from C++ to Python, improving accessibility and enabling further quantitative analysis.
 				</li>
 				<li>
-					Developed 3D imaging visualisations using VTK, including vertex-to-vertex scan
-					comparisons to support quantitative assessment and visual interpretation of anatomical differences.
-				</li>			
+					Developed 3D imaging visualisations using VTK, including vertex-to-vertex scan comparisons to support quantitative assessment and visual interpretation of anatomical differences.
+				</li>
 			</ul>
 		</article>
-		<article id="workaug20workaug20">
+
+		<article id="workaug20">
 			<h3>Website Designer / Developer</h3>
-			<div class="d-flex flex-wrap justify-content-between cv-meta">
+			<div class="cv-meta">
 				<span>3DAM LTD</span>
 				<strong>Aug 2020 - Oct 2020</strong>
 			</div>
 			<ul>
 				<li>
-					Designed and delivered a client-facing business website, translating requirements into a
-					functional, user-friendly solution.
+					Designed and delivered a client-facing business website, translating requirements into a functional, user-friendly solution.
 				</li>
 			</ul>
 		</article>
+
 		<article id="workjun20">
 			<h3>Volunteer Back-end / Server Engineer</h3>
-			<div class="d-flex flex-wrap justify-content-between cv-meta">
+			<div class="cv-meta">
 				<span>Physics, Royal Marsden Hospital</span>
 				<strong>Jun 2020 - Aug 2020</strong>
 			</div>
 			<ul>
 				<li>
-					Configured servers, monitoring systems, and backup pipelines using Docker and
-					ZFS/RAIDZ2, ensuring reliable infrastructure under COVID-19 constraints.
+					Configured servers, monitoring systems, and backup pipelines using Docker and ZFS/RAIDZ2, ensuring reliable infrastructure under COVID-19 constraints.
 				</li>
 			</ul>
 		</article>
+
 		<article id="worksep18">
 			<h3>Junior Clinical Scientist: Bioinformatics (Physical Sciences)</h3>
-			<div class="d-flex flex-wrap justify-content-between cv-meta">
+			<div class="cv-meta">
 				<span>Medical Physics and Bio-engineering, UCLH</span>
 				<strong>Sep 2018 - Oct 2019</strong>
 			</div>
 			<ul>
 				<li>
-					Delivered computational and quantitative solutions across multiple clinical and scientific
-					teams, supporting medical physics and healthcare informatics projects.
+					Delivered computational and quantitative solutions across multiple clinical and scientific teams, supporting medical physics and healthcare informatics projects.
 				</li>
 				<li>
-					Designed and implemented statistical and mathematical software models to assist
-					radiation protection planning and clinical decision-making.
+					Designed and implemented statistical and mathematical software models to assist radiation protection planning and clinical decision-making.
 				</li>
 				<li>
-					Built, maintained, and enhanced ETL data pipelines for clinical datasets, including
-					cleaning, deduplication, validation, and reporting workflows.
+					Built, maintained, and enhanced ETL data pipelines for clinical datasets, including cleaning, deduplication, validation, and reporting workflows.
 				</li>
 				<li>
-					Conducted exploratory data analysis and produced actionable reports for clinical and
-					technical stakeholders, adhering to data governance and international best practices.
+					Conducted exploratory data analysis and produced actionable reports for clinical and technical stakeholders, adhering to data governance and international best practices.
 				</li>
 			</ul>
 		</article>
 	</section>
+
 	<section id="publications">
-			<h2 class="section-heading">
-				Publications
-			</h2>
-			<p>
-				Contributor to publications involving large-scale biological datasets, data standardisation, and international research collaboration.
-			</p>
-			<ul class="cv-pubs">
-				<li>
-					Brouwer, M., Bauernfeind, J., Davuluri, G., [ and 9 others, including <b>Ruff, J.</b>] (2026). 
-					<a href="https://doi.org/10.1093/bioinformatics/btag287"><em>Integrating plant phenotypic and genotypic data in the AGENT project: a BrAPI service implementation. </em></a>
-					Bioinformatics, Volume 42, Issue 5, May 2026, btag287
-				</li>
-				<li>
-					Le Floch, E., Adam-Blondon, AF., Alaux, M. [ and 52 others, including <b>Ruff, J.</b>] (2026). 
-					<a href="https://doi.org/10.1038/s41597-026-06908-x"><em>Wheat historical phenotypic data from European genebanks as an important resource for research and breeding. </em></a>
-					Scientific Data 13, 566, 2026. 
-				</li>
-				<li>
-					Selby, P., Abbeloos, R. [ and 75 others, including <b>Ruff, J.</b>] (2025). 
-					<a href="https://doi.org/10.1093/database/baaf048"><em>BrAPI v2: real-world applications for data integration and collaboration in the breeding and genetics community. </em></a>
-					Database, Volume 2025, 2025, baaf048. 
-				</li>
-				<li>
-					Gaya E., Diazgranados, M. [ and 39 others, including <b>Ruff, J.</b>] (2021). 
-					<a href="https://www.researchgate.net/publication/352492133_ColFungi_Colombian_resources_for_Fungi_made_Accessible"><em>ColFungi: Colombian resources for Fungi Made Accessible. </em></a>
-					Royal Botanic Gardens, Kew, Richmond, UK.
-				</li>
-				<li>
-					Diazgranados, M., Ulian, T. [ and 54 others, including <b>Ruff,J.</b>] (2020). 
-					<a href="https://www.researchgate.net/publication/350358746_ColPlantA_Colombian_resources_for_Plants_made_Accessible_2nd_ed"><em>ColPlantA: Colombian resources for Plants made Accessible (2nd ed.). </em></a>
-					Royal Botanic Gardens, Kew, Richmond, UK.
-				</li>
-			</ul>
+		<h2 class="section-heading">Publications</h2>
+		<p>
+			Contributor to publications involving large-scale biological datasets, data standardisation, and international research collaboration.
+		</p>
+		<ul class="cv-pubs">
+			<li>
+				Brouwer, M., Bauernfeind, J., Davuluri, G., [and 9 others, including <strong>Ruff, J.</strong>] (2026). 
+				<a href="https://doi.org/10.1093/bioinformatics/btag287"><em> Integrating plant phenotypic and genotypic data in the AGENT project: a BrAPI service implementation.</em></a>
+				Bioinformatics, Volume 42, Issue 5, May 2026, btag287 
+				<a class="cv-doi" href="https://doi.org/10.1038/s41597-026-06908-x">https://doi.org/10.1038/s41597-026-06908-x</a>
+			</li>
+			<li>
+				Le Floch, E., Adam-Blondon, AF., Alaux, M. [and 52 others, including <strong>Ruff, J.</strong>] (2026).
+				<a href="https://doi.org/10.1038/s41597-026-06908-x"><em>Wheat historical phenotypic data from European genebanks as an important resource for research and breeding.</em></a>
+				Scientific Data 13, 566, 2026.
+				<a class="cv-doi" href="https://doi.org/10.1038/s41597-026-06908-x">https://doi.org/10.1038/s41597-026-06908-x</a>
+			</li>
+			<li>
+				Selby, P., Abbeloos, R. [and 75 others, including <strong>Ruff, J.</strong>] (2025).
+				<a href="https://doi.org/10.1093/database/baaf048"><em>BrAPI v2: real-world applications for data integration and collaboration in the breeding and genetics community.</em></a>
+				Database, Volume 2025, 2025, baaf048.
+				<a class="cv-doi" href="https://doi.org/10.1093/database/baaf048">https://doi.org/10.1093/database/baaf048</a>
+			</li>
+			<li>
+				Gaya E., Diazgranados, M. [and 39 others, including <strong>Ruff, J.</strong>] (2021).
+				<a href="https://www.researchgate.net/publication/352492133_ColFungi_Colombian_resources_for_Fungi_made_Accessible"><em>ColFungi: Colombian resources for Fungi Made Accessible.</em></a>
+				Royal Botanic Gardens, Kew, Richmond, UK.
+			</li>
+			<li>
+				Diazgranados, M., Ulian, T. [and 54 others, including <strong>Ruff, J.</strong>] (2020).
+				<a href="https://www.researchgate.net/publication/350358746_ColPlantA_Colombian_resources_for_Plants_made_Accessible_2nd_ed"><em>ColPlantA: Colombian resources for Plants made Accessible (2nd ed.).</em></a>
+				Royal Botanic Gardens, Kew, Richmond, UK.
+			</li>
+		</ul>
 	</section>
+
 	<section id="education">
-		<h2 class="section-heading">
-			Education
-		</h2>
+		<h2 class="section-heading">Education</h2>
 		<article id="lboro2014">
-			<h3>Junior Clinical Scientist: Bioinformatics (Physical Sciences)</h3>
-				<div class="d-flex flex-wrap justify-content-between cv-meta">
-					<span>Computer Science BSc; Second Class Honours, Upper Division</span>
-					<strong>2014 - 2017</strong>
-				</div>
-			<ul>
-				<li>
-					Delivered computational and quantitative solutions across multiple clinical and scientific
-					teams, supporting medical physics and healthcare informatics projects.
-				</li>
-				<li>
-					Designed and implemented statistical and mathematical software models to assist
-					radiation protection planning and clinical decision-making.
-				</li>
-				<li>
-					Built, maintained, and enhanced ETL data pipelines for clinical datasets, including
-					cleaning, deduplication, validation, and reporting workflows.
-				</li>
-				<li>
-					Conducted exploratory data analysis and produced actionable reports for clinical and
-					technical stakeholders, adhering to data governance and international best practices.
-				</li>
-			</ul>
+			<h3>Loughborough University</h3>
+			<div class="cv-meta">
+				<span>Computer Science BSc; Second Class Honours, Upper Division</span>
+				<strong>2014 - 2017</strong>
+			</div>
 		</article>
 	</section>
+
 	<section id="references">
-		<h2 class="section-heading">
-			References
-		</h2>
-		<p>
-			Available upon request. Full contact details are in the PDF version of my CV (download link in the footer).
+		<h2 class="section-heading">References</h2>
+		<p>Available upon request.</p>
+	</section>
+
+	<section id="links">
+		<h2 class="section-heading">Links &amp; Contact Info</h2>
+		<div class="button-row">
+			<a class="btn btn-outline-primary" href="https://github.com/JosephRuff"><i class="fab fa-github"></i> GitHub</a>
+			<a class="btn btn-outline-primary" href="https://www.linkedin.com/in/joseph-ruff-a99062393"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+		</div>
+		<p>For full contact information, please download the pdf version of my CV.</p>
+		<p class="mb-5">
+			<!-- Absolute path, so it works from /curriculum_vitae/ as well as the site root. -->
+			<a class="btn btn-primary" href="{{ '/Curriculum%20Vitae%20Joseph%20David%20Ruff.pdf' | relative_url }}" download><i class="fas fa-download"></i> Download CV (PDF)</a>
 		</p>
 	</section>
+
 </div>

@@ -1,0 +1,390 @@
+// Portfolio additions: project pages and the CV page.
+// Load it by adding this line to the END of _sass/styles.scss:
+//
+//     @import "portfolio";
+//
+// (If you already pasted the earlier ".cv { ... }" block into styles.scss,
+// delete it - this file replaces it.)
+
+// ---------------------------------------------------------------------
+// Shared pieces
+// ---------------------------------------------------------------------
+
+@mixin chip {
+  display: inline-block;
+  padding: 2px 12px;
+  font-family: $headings-font-family;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  color: $gray-700;
+  background: $gray-100;
+  border: 1px solid $gray-200;
+  border-radius: 20px;
+}
+
+// A row of buttons that wraps cleanly on narrow screens
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 40px 0;
+
+  .btn i {
+    margin-right: 8px;
+  }
+}
+
+// ---------------------------------------------------------------------
+// Project pages (wrap the page body in <div class="project">)
+// ---------------------------------------------------------------------
+
+.project {
+  p {
+    margin: 20px 0;
+  }
+
+  .lead-in {
+    font-size: 22px;
+    line-height: 1.55;
+  }
+
+  // The theme's default is 36px with a 60px top margin: too big for a project page
+  .section-heading {
+    font-size: 26px;
+    margin: 48px 0 16px;
+  }
+}
+
+.project-tags {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+
+  li {
+    @include chip;
+    margin: 0 6px 8px 0;
+  }
+}
+
+.project-list {
+  padding-left: 1.2rem;
+
+  li {
+    margin-bottom: 6px;
+
+    &::marker {
+      color: $primary;
+    }
+  }
+}
+
+// Callout: "work in progress" notes and highlights
+.project-note {
+  margin: 30px 0;
+  padding: 16px 20px;
+  font-size: 17px;
+  background: $gray-100;
+  border-left: 4px solid $primary;
+
+  p {
+    margin: 0;
+  }
+
+  i {
+    margin-right: 8px;
+    color: $primary;
+  }
+
+  &--highlight {
+    font-size: 19px;
+    background: rgba($primary, 0.08);
+  }
+}
+
+// Charts and images
+.project-figure {
+  margin: 36px 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid $gray-200;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    color: $gray-600;
+  }
+}
+
+.project-figure__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 30px;
+  text-align: center;
+  color: $gray-600;
+  background: $gray-100;
+  border: 1px solid $gray-300;
+
+  i {
+    margin-bottom: 14px;
+    font-size: 40px;
+    color: $gray-500;
+  }
+
+  strong {
+    font-family: $headings-font-family;
+    font-size: 18px;
+    color: $gray-800;
+  }
+
+  span {
+    margin-top: 6px;
+    font-size: 15px;
+  }
+}
+
+// Comparison / summary tables
+.project-table {
+  margin: 24px 0;
+  font-size: 16px;
+
+  th,
+  td {
+    padding: 12px 14px;
+    vertical-align: top;
+  }
+
+  thead th {
+    font-family: $headings-font-family;
+    font-size: 14px;
+  }
+
+  tbody th {
+    font-family: $headings-font-family;
+    font-size: 14px;
+    font-weight: 700;
+    color: $gray-700;
+  }
+}
+
+// List of notebooks with a status on the right
+.notebook-list {
+  margin: 24px 0;
+
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 18px;
+    font-size: 17px;
+  }
+
+  .badge {
+    font-family: $headings-font-family;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+.notebook-list__go {
+  font-family: $headings-font-family;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: $primary;
+
+  i {
+    margin-left: 6px;
+  }
+}
+
+// Schematic of the 60 / 30 / 10 split
+.rule-bar {
+  display: flex;
+  gap: 4px;
+  margin: 30px 0;
+}
+
+.rule-bar__seg {
+  min-width: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 14px;
+    margin-bottom: 8px;
+    border-radius: 7px;
+  }
+
+  strong {
+    display: block;
+    font-family: $headings-font-family;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  small {
+    display: block;
+    font-size: 14px;
+    color: $gray-600;
+  }
+}
+
+.rule-bar__seg--dominant {
+  flex: 60 1 0;
+
+  &::before {
+    background: darken($primary, 10%);
+  }
+}
+
+.rule-bar__seg--secondary {
+  flex: 30 1 0;
+
+  &::before {
+    background: $primary;
+  }
+}
+
+.rule-bar__seg--accent {
+  flex: 10 1 0;
+
+  &::before {
+    background: lighten($primary, 30%);
+  }
+
+  // On phones the 10% column is narrower than its label: let the text
+  // spill leftwards instead of off the edge of the screen.
+  @media (max-width: 575px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    white-space: nowrap;
+
+    &::before {
+      align-self: stretch;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------
+// CV page (wrap the page body in <div class="cv">)
+// ---------------------------------------------------------------------
+
+.cv {
+  // Keep anchored headings clear of the fixed navbar
+  section[id],
+  article[id] {
+    scroll-margin-top: 90px;
+  }
+
+  .section-heading {
+    font-size: 28px;
+    margin: 2.5rem 0 1rem;
+  }
+
+  h3 {
+    margin: 2rem 0 0.25rem;
+    font-size: 1.25rem;
+  }
+
+  article li {
+    margin-bottom: 0.35rem;
+  }
+}
+
+// Organisation on the left, dates on the right; stacks on phones
+.cv-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 17px;
+  color: $gray-600;
+
+  strong {
+    font-family: $headings-font-family;
+    white-space: nowrap;
+    color: $gray-800;
+  }
+}
+
+.cv-contents {
+  margin: 1.5rem 0 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .list-inline-item {
+    margin-bottom: 6px;
+  }
+
+  a {
+    @include chip;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+      border-color: $primary;
+    }
+  }
+}
+
+.cv-skills {
+  dt {
+    margin-top: 1.4rem;
+    font-family: $headings-font-family;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: $gray-700;
+  }
+
+  dd {
+    margin: 0.5rem 0 0;
+  }
+}
+
+.cv-chips {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    @include chip;
+    margin: 0 6px 8px 0;
+  }
+}
+
+.cv-pubs {
+  padding-left: 1.2rem;
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  .cv-doi {
+    display: block;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+  }
+}

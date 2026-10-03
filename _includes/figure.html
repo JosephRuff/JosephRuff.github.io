@@ -1,0 +1,25 @@
+{%- comment -%}
+  Chart / image figure for project pages.
+
+  Normal image:
+    {% include figure.html src="/img/projects/my-project/chart.png" alt="Describe the chart and its finding" caption="Optional caption" %}
+
+  "Coming soon" placeholder (no image yet):
+    {% include figure.html placeholder=true title="Chart coming soon" text="One line on what will go here" alt="Chart placeholder" %}
+{%- endcomment -%}
+<figure class="project-figure">
+  {%- if include.placeholder %}
+  <div class="project-figure__placeholder" role="img" aria-label="{{ include.alt | escape }}">
+    <i class="fas fa-chart-line" aria-hidden="true"></i>
+    <strong>{{ include.title }}</strong>
+    {%- if include.text %}
+    <span>{{ include.text }}</span>
+    {%- endif %}
+  </div>
+  {%- else %}
+  <img src="{{ include.src | relative_url }}" alt="{{ include.alt | escape }}" loading="lazy">
+  {%- endif %}
+  {%- if include.caption %}
+  <figcaption>{{ include.caption }}</figcaption>
+  {%- endif %}
+</figure>

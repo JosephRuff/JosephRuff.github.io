@@ -7,24 +7,77 @@ last_updated: 2026-04-12
 background: '/img/projects/multimodal-preprocessing-pipeline.jpg'
 ---
 
-<p>
-	 This project implements a fully reproducible pipeline for downloading, preprocessing, and validating five open-access multimodal time-series datasets (PAMAP2, WISDM, mHealth, EEGMMIDB, and PTB-XL), in preparation for downstream self-supervised learning workflows. 
-</p>
+<div class="project">
 
-<p>
-	 The pipeline harmonises three wearable activity recognition datasets (HAR) to a common 20 Hz representation with a shared six-channel accelerometer/gyroscope schema and unified class label taxonomy, enabling a single model to train across datasets. EEG data from the PhysioNet EEG Motor Movement/Imagery Database is preprocessed using MNE, with event-aligned 4-second epochs extracted from motor imagery runs. 12-lead ECG data from PTB-XL is ingested via the PhysioNet AWS S3 mirror, bandpass filtered, and split into patient-safe train, validation, and test folds. 
-</p>
+	<p class="lead-in">
+		This project implements a fully reproducible pipeline for downloading, preprocessing, and validating five open-access multimodal time-series datasets (PAMAP2, WISDM, mHealth, EEGMMIDB, and PTB-XL), in preparation for downstream self-supervised learning workflows.
+	</p>
 
-<p>
-	 All outputs are stored as float32 NumPy arrays in a consistent [N, C, T] format alongside structured metadata CSVs covering subject provenance, label mappings, sampling rates, channel schemas, and QC flags. A validation script checks array integrity, label distributions, subject-level leakage controls, and HAR harmonisation across datasets. 
-</p>
+	<div class="project-note project-note--highlight">
+		<p><i class="fas fa-trophy" aria-hidden="true"></i>The pipeline scored 3rd out of 17 submissions in a competitive technical assessment for a Research Assistant post at Imperial College London, with the preprocessing plan rated the most thoroughly reasoned of all submissions.</p>
+	</div>
 
-<p>
-	 The pipeline scored 3rd out of 17 submissions in a competitive technical assessment for a Research Assistant post at Imperial College London, with the preprocessing plan rated the most thoroughly reasoned of all submissions. 
-</p>
+	<ul class="project-tags" aria-label="Topics">
+		<li>EEG</li>
+		<li>ECG</li>
+		<li>Wearable HAR</li>
+		<li>MNE</li>
+		<li>NumPy</li>
+		<li>Self-supervised learning</li>
+	</ul>
 
-<hr>
+	<h2 class="section-heading">Datasets and processing</h2>
 
-<p style="text-align:center">
-	<a href="https://github.com/JosephRuff/multimodal-preprocessing-pipeline" class="button icon brands fa-github">Source Code</a>
-</p>
+	<div class="table-responsive">
+		<table class="table project-table">
+			<thead>
+				<tr>
+					<th scope="col">Dataset</th>
+					<th scope="col">Signal</th>
+					<th scope="col">Processing</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">PAMAP2, WISDM, mHealth</th>
+					<td>Wearable activity recognition (HAR)</td>
+					<td>Harmonised to a common 20&nbsp;Hz representation with a shared six-channel accelerometer/gyroscope schema and unified class label taxonomy, enabling a single model to train across datasets.</td>
+				</tr>
+				<tr>
+					<th scope="row">EEGMMIDB</th>
+					<td>EEG (PhysioNet EEG Motor Movement/Imagery Database)</td>
+					<td>Preprocessed using MNE, with event-aligned 4-second epochs extracted from motor imagery runs.</td>
+				</tr>
+				<tr>
+					<th scope="row">PTB-XL</th>
+					<td>12-lead ECG</td>
+					<td>Ingested via the PhysioNet AWS S3 mirror, bandpass filtered, and split into patient-safe train, validation, and test folds.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<h2 class="section-heading">Outputs</h2>
+
+	<p>
+		All outputs are stored as <code>float32</code> NumPy arrays in a consistent <code>[N, C, T]</code> format alongside structured metadata CSVs covering subject provenance, label mappings, sampling rates, channel schemas, and QC flags.
+	</p>
+
+	<h2 class="section-heading">Validation</h2>
+
+	<p>
+		A validation script checks:
+	</p>
+
+	<ul class="project-list">
+		<li>Array integrity</li>
+		<li>Label distributions</li>
+		<li>Subject-level leakage controls</li>
+		<li>HAR harmonisation across datasets</li>
+	</ul>
+
+	<div class="button-row">
+		<a class="btn btn-primary" href="https://github.com/JosephRuff/multimodal-preprocessing-pipeline"><i class="fab fa-github"></i> Source Code</a>
+	</div>
+
+</div>
